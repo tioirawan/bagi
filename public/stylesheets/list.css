@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.container {
+  min-height: 100vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul,
+li {
+  padding: 0px;
+}
+
+.list {
+  background-color: #5352ed;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 9px;
+  list-style-type: none;
+}
+
+.list-item {
+  min-height: 70px;
+  padding: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  border: 2px solid #f7f7f7;
+  border-radius: 5px;
+  margin: 20px 10px;
+  background-color: #2ed573;
+  position: relative;
+  color: #f1f2f6;
+  word-wrap: break-word;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.list-item .download {
+  color: #2f3542;
+  cursor: pointer;
+  padding: 0 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.list-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.list-item .delete {
+  color: #ff4757;
+  cursor: pointer;
+  padding: 0 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.file-btn {
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.file-info {
+  color: #dff9fb;
+}
+
+.gray {
+  color: #2f3542;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 500px) {
+  .file-info {
+    padding-bottom: 17px;
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Bagi
+  </title>
+  <link rel="stylesheet" href='/stylesheets/font.css' />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/list.css' />
+  <link rel="stylesheet" href='/stylesheets/dropzone.css' />
+  <script src="/javascripts/dropzone.js"></script>
+  <script src="/javascripts/script.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Available at
+      <%= ip %>:<%= port %>
+    </h1>
+  </div>
+
+  <div class="main">
+    <form action="/upload" class="dropzone filedrop" enctype="multipart/form-data" method="post" id="fileDrop"></form>
+
+    <div class="listfile">
+      <% if(files.length) { %>
+        <button class="clear-button" onClick="clearAll()">
+          Delete all files
+        </button>
+        <ul class="list">
+          <% files.forEach(function(file) { %>
+            <li class="list-item">
+              <div class="file-info">
+                <span class="gray"> File Name:</span> <%= file.name %><br />
+                <span class="gray"> Size:</span> <%= file.size %><br />
+              </div>
+              <div class="file-btn">
+                <span class="download"><a href="/download/<%= encodeURI(file.name) %>">Download</a></span>
+                <span class="delete"><a href="/delete/<%= encodeURI(file.name) %>">Delete</a></span>
+              </div>
+            </li>
+          <% }); %>
+        </ul>
+        <% } %>
+    </div>
+  </div>
+</body>
+
+</html>

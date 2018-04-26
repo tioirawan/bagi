@@ -5,6 +5,8 @@
 </h1>
 
 ## Screenshot
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/indmind/bagi.svg)](https://greenkeeper.io/)
 ![Screenshot](screenshot.png)
 
 files are available under `files` folder
